@@ -4,12 +4,22 @@ set backspace=2
 
 " highlight
 syntax on
-colorscheme murphy
+colorscheme slate
+set hlsearch
+set cursorline
+set cursorcolumn
+
+" space, tab and return
+set list
+set listchars=tab:t_,trail:~,eol:$
 
 " indent
 set autoindent
 set expandtab
 set tabstop=2
+set foldmethod=syntax
+set foldcolumn=2
+autocmd BufRead * normal zR
 
 " swap
 " set noswapfile
@@ -24,4 +34,14 @@ if !isdirectory(expand("$HOME/.vim/undodir"))
         call mkdir(expand("$HOME/.vim/undodir"), "p")
 endif
 set undodir=$HOME/.vim/undodir
+
+" plugins
+packloadall
+silent! helptags ALL
+
+" key config
+noremap <c-h> <c-w><c-h>
+noremap <c-j> <c-w><c-j>
+noremap <c-k> <c-w><c-k>
+noremap <c-l> <c-w><c-l>
 
