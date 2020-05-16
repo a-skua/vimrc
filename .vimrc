@@ -1,3 +1,17 @@
+" plugins
+" set variables
+let NERDTreeShowBookmarks = 1
+let NERDTreeHijackNetrw = 0
+
+" load
+packloadall
+silent! helptags ALL
+
+" NERDTree
+autocmd VimEnter * NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") &&
+    \ b:NERDTree.isTabTree()) | q | endif
+
 " commons
 set number
 set backspace=2
@@ -6,10 +20,12 @@ set wildmode=list:longest,full
 
 " highlight
 syntax on
-colorscheme slate
-set hlsearch
+colorscheme iceberg
 set cursorline
 set cursorcolumn
+" search
+set hlsearch
+set incsearch
 
 " space, tab and return
 set list
@@ -37,15 +53,10 @@ if !isdirectory(expand("$HOME/.vim/undodir"))
 endif
 set undodir=$HOME/.vim/undodir
 
-" plugins
-packloadall
-silent! helptags ALL
-let NERDTreeShowBookmarks=1
-autocmd VimEnter * NERDTree
-
 " key config
 noremap <c-h> <c-w><c-h>
 noremap <c-j> <c-w><c-j>
 noremap <c-k> <c-w><c-k>
 noremap <c-l> <c-w><c-l>
+command! Bd :bp | :sp | :bn | :bd
 
