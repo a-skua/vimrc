@@ -1,6 +1,8 @@
 " commons
 set number
 set backspace=2
+set wildmenu
+set wildmode=list:longest,full
 
 " highlight
 syntax on
@@ -16,7 +18,7 @@ set listchars=tab:t_,trail:~,eol:$
 " indent
 set autoindent
 set expandtab
-set tabstop=2
+set tabstop=4
 set foldmethod=syntax
 set foldcolumn=2
 autocmd BufRead * normal zR
@@ -38,6 +40,8 @@ set undodir=$HOME/.vim/undodir
 " plugins
 packloadall
 silent! helptags ALL
+let NERDTreeShowBookmarks=1
+autocmd VimEnter * NERDTree
 
 " key config
 noremap <c-h> <c-w><c-h>
