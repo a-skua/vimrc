@@ -35,6 +35,7 @@ set listchars=tab:t_,trail:~,eol:$
 set autoindent
 set expandtab
 set tabstop=4
+set shiftwidth=4
 set foldmethod=syntax
 set foldcolumn=2
 autocmd BufRead * normal zR
