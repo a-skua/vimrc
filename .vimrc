@@ -1,4 +1,20 @@
 " plugins
+" vim-plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+        \ https://raw.github.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $HOME/.vimrc
+endif
+
+call plug#begin()
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-vinegar'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'easymotion/vim-easymotion'
+Plug 'cocopon/iceberg.vim'
+call plug#end()
+
 " set variables
 let NERDTreeShowBookmarks = 1
 let NERDTreeHijackNetrw = 0
@@ -6,6 +22,8 @@ let NERDTreeHijackNetrw = 0
 " load
 packloadall
 silent! helptags ALL
+
+colorscheme iceberg
 
 " NERDTree
 autocmd VimEnter * NERDTree
@@ -20,7 +38,6 @@ set wildmode=list:longest,full
 
 " highlight
 syntax on
-colorscheme iceberg
 set cursorline
 set cursorcolumn
 " search
@@ -55,9 +72,30 @@ endif
 set undodir=$HOME/.vim/undodir
 
 " key config
+let mapleader = "\<space>"
+noremap <leader>n :NERDTreeToggle<cr>
+noremap <leader>p :CtrlP<cr>
+noremap <leader>b :CtrlPBuffer<cr>
+noremap <leader>m :CtrlPMRU<cr>
+
 noremap <c-h> <c-w><c-h>
 noremap <c-j> <c-w><c-j>
 noremap <c-k> <c-w><c-k>
 noremap <c-l> <c-w><c-l>
+noremap ; :
+
+inoremap ' ''<esc>i
+inoremap " ""<esc>i
+inoremap ` ``<esc>i
+inoremap ( ()<esc>i
+inoremap { {}<esc>i
+inoremap [ []<esc>i
+inoremap < <><esc>i
+
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+
 command! Bd :bp | :sp | :bn | :bd
 
