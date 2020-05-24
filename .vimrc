@@ -91,6 +91,8 @@ inoremap ( ()<esc>i
 inoremap { {}<esc>i
 inoremap [ []<esc>i
 inoremap < <><esc>i
+inoremap <c-l> <esc>A
+inoremap <c-h> <esc>I
 
 map <up> <nop>
 map <down> <nop>
