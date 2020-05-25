@@ -13,6 +13,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'cocopon/iceberg.vim'
+Plug 'fatih/vim-go'
 call plug#end()
 
 " set variables
