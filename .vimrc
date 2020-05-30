@@ -27,7 +27,7 @@ silent! helptags ALL
 colorscheme iceberg
 
 " NERDTree
-autocmd VimEnter * NERDTree
+" autocmd VimEnter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") &&
     \ b:NERDTree.isTabTree()) | q | endif
 
@@ -91,9 +91,9 @@ inoremap ` ``<esc>i
 inoremap ( ()<esc>i
 inoremap { {}<esc>i
 inoremap [ []<esc>i
-inoremap < <><esc>i
-inoremap <c-l> <esc>A
-inoremap <c-h> <esc>I
+" inoremap < <><esc>i
+inoremap <c-l> <esc>la
+inoremap <c-h> <esc>i
 
 map <up> <nop>
 map <down> <nop>
