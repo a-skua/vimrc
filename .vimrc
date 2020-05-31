@@ -96,6 +96,12 @@ inoremap [ []<esc>i
 inoremap <c-l> <esc>la
 inoremap <c-h> <esc>i
 
+tnoremap <c-h> <c-w><c-h>
+tnoremap <c-j> <c-w><c-j>
+tnoremap <c-k> <c-w><c-k>
+tnoremap <c-l> <c-w><c-l>
+tnoremap <c-n> <c-w>N
+
 map <up> <nop>
 map <down> <nop>
 map <left> <nop>

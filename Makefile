@@ -37,3 +37,7 @@ plugin_add_iceberg:
 option_plugin_add_pgmnt:
 	git clone https://github.com/cocopon/pgmnt.vim.git ${VIM_PLUGINS_PATH}/pgmnt.vim
 
+set_git_merge_tool:
+	git config --global merge.tool vimdiff
+	git config --global merge.conflictstyle diff3
+	git config --global mergetool.prompt false
