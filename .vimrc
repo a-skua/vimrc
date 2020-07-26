@@ -13,9 +13,9 @@ Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
-Plug 'cocopon/iceberg.vim'
+Plug 'cocopon/iceberg.vim'          " colorscheme
 Plug 'fatih/vim-go'
-Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'      " status bar
 call plug#end()
 
 " set variables
@@ -30,18 +30,22 @@ silent! helptags ALL
 colorscheme iceberg
 set termguicolors
 
-set laststatus=2"
-
 " NERDTree
 " autocmd VimEnter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") &&
     \ b:NERDTree.isTabTree()) | q | endif
 
 " commons
-set number
+set  ruler
+if &co > 80             " when large terminal
+    set number          " show line-number
+    set foldcolumn=2    " show guide
+endif
 set backspace=2
 set wildmenu
 set wildmode=list:longest,full
+set linebreak
+set laststatus=2"
 
 " highlight
 syntax on
@@ -61,7 +65,6 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 set foldmethod=syntax
-set foldcolumn=2
 autocmd BufRead * normal zR
 
 " swap
