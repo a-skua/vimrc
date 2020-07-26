@@ -15,6 +15,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'cocopon/iceberg.vim'
 Plug 'fatih/vim-go'
+Plug 'vim-airline/vim-airline'
 call plug#end()
 
 " set variables
@@ -25,7 +26,11 @@ let NERDTreeHijackNetrw = 0
 packloadall
 silent! helptags ALL
 
+" color
 colorscheme iceberg
+set termguicolors
+
+set laststatus=2"
 
 " NERDTree
 " autocmd VimEnter * NERDTree
