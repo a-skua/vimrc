@@ -18,11 +18,18 @@ Plug 'cocopon/iceberg.vim'          " colorscheme
 Plug 'vim-airline/vim-airline'      " status bar
 Plug 'previm/previm'                " preview by markdown and other
 Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'mattn/vim-lsp-settings'
+Plug 'mattn/vim-goimports'
 Plug 'dart-lang/dart-vim-plugin'    " dart
 call plug#end()
+
+" vim-lsp
+let g:lsp_diagnostics_enabled = 1
+let g:lsp_diagnostics_echo_cursor = 1
+let g:asyncomplete_popup_delay = 200
+let g:lsp_text_edit_enabled = 0
 
 " previm
 
