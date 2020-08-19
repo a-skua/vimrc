@@ -16,7 +16,16 @@ Plug 'easymotion/vim-easymotion'
 Plug 'cocopon/iceberg.vim'          " colorscheme
 Plug 'fatih/vim-go'
 Plug 'vim-airline/vim-airline'      " status bar
+Plug 'previm/previm'                " preview by markdown and other"
 call plug#end()
+
+" previm
+
+" check os...
+let s:ostype = system('uname')
+if s:ostype == "Linux\n"
+    let g:previm_open_cmd = 'google-chrome'
+endif
 
 " set variables
 let NERDTreeShowBookmarks = 1
