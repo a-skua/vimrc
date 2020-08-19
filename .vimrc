@@ -14,9 +14,14 @@ Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'cocopon/iceberg.vim'          " colorscheme
-Plug 'fatih/vim-go'
+" Plug 'fatih/vim-go'
 Plug 'vim-airline/vim-airline'      " status bar
-Plug 'previm/previm'                " preview by markdown and other"
+Plug 'previm/previm'                " preview by markdown and other
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'dart-lang/dart-vim-plugin'    " dart
 call plug#end()
 
 " previm
