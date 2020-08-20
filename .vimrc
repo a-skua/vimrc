@@ -37,6 +37,7 @@ let g:lsp_text_edit_enabled = 0
 let s:ostype = system('uname')
 if s:ostype == "Linux\n"
     let g:previm_open_cmd = 'google-chrome'
+    set termguicolors
 endif
 
 " set variables
@@ -49,7 +50,6 @@ silent! helptags ALL
 
 " color
 colorscheme iceberg
-set termguicolors
 
 " NERDTree
 " autocmd VimEnter * NERDTree
