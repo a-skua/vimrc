@@ -13,16 +13,19 @@ Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
-Plug 'cocopon/iceberg.vim'          " colorscheme
+Plug 'cocopon/iceberg.vim'              " colorscheme
 " Plug 'fatih/vim-go'
-Plug 'vim-airline/vim-airline'      " status bar
-Plug 'previm/previm'                " preview by markdown and other
+Plug 'vim-airline/vim-airline'          " status bar
+Plug 'previm/previm'                    " preview by markdown and other
 Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'mattn/vim-lsp-settings'
 Plug 'mattn/vim-goimports'
-Plug 'dart-lang/dart-vim-plugin'    " dart
+Plug 'dart-lang/dart-vim-plugin'        " dart
+Plug 'editorconfig/editorconfig-vim'    " editorconfig
+Plug 'leafgarland/typescript-vim'       " react
+Plug 'peitalin/vim-jsx-typescript'
 call plug#end()
 
 " vim-lsp
